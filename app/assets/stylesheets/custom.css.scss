@@ -1,2 +1,37 @@
+$navbar-default-bg: black;
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.center {
+  text-align: center;
+}
+
+#logo {
+  float:left;
+  font-size: 1.7em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+#logo:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.jumbotron {
+  color: white;
+  background-image: asset-url('cooking-cover.jpg');
+  background-size: cover;
+  height: 300px;
+}
+
+.btn-xlarge {
+  background-color: black;
+}
+
+.btn-xlarge:hover {
+  text-decoration: none;
+}
