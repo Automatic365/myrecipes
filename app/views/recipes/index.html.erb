@@ -1,1 +1,7 @@
-RecipesController
+<h1>Recipes</h1>
+
+<% @recipes.each do |recipe| %>
+<h3><%= recipe.name %></h3><br>
+<h3><%= recipe.description %><h3><br>
+<h4>Created by:<%= recipe.chef.chefname %><h4>
+  <% end %>
