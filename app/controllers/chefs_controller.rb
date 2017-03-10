@@ -13,7 +13,7 @@ class ChefsController<ApplicationController
     @chef = Chef.new(chef_params)
     if @chef.save
       flash[:success] = "Chef created successfully"
-      render :show
+      redirect_to chefs_path(@chef)
     else
       render :new
     end
