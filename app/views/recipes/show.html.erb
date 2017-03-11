@@ -17,7 +17,7 @@
       <div class="pull-right"><%= time_ago_in_words(@recipe.created_at) %> ago</div>
     </p>
   </div>
-  <% if logged_in? && current_chef == @recipe.chef %>
+  <% if logged_in? && (current_chef == @recipe.chef || current_chef.admin?) %>
     <div class="recipe-edit">
       <%= link_to "Edit Recipe", edit_recipe_path(@recipe), class:"btn btn-primary"%>
       <%= link_to "Delete Recipe", edit_recipe_path(@recipe), class:"btn btn-danger",
