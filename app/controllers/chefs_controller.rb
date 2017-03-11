@@ -32,7 +32,7 @@ class ChefsController<ApplicationController
   def update
     if @chef.update(chef_params)
       flash[:success] = "Chef updated successfully"
-      render :show
+      redirect_to chef_path(@chef)
     else
       render :edit
     end
