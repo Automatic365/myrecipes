@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'pages/home', to: 'pages#home'
   resources :recipes
   resources :chefs
+  resources :ingredients, except:[:destroy]
 
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
